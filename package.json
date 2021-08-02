@@ -1,0 +1,20 @@
+{
+  "name": "lyrics-api",
+  "version": "1.0.0",
+  "description": "An API which provides lyrics of the searched song",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rushikesh Kundkar",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "es6-promise": "^4.2.8",
+    "express": "^4.17.1",
+    "isomorphic-fetch": "^3.0.0",
+    "jsdom": "^16.6.0",
+    "lyrics-monarch-api": "^2.1.0",
+    "puppeteer": "^10.1.0"
+  }
+}
