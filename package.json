@@ -1,24 +1,31 @@
 {
   "name": "melody-api",
   "version": "1.0.0",
-  "description": "fetches the lyrics of a song by its artist,title or part of lyrics.",
+  "description": "Quickly fetch the lyrics of a song by its artist,title or some part of lyrics.",
   "main": "index.js",
   "directories": {
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo Welcome to the API && node example/example.js"
   },
+  "keywords": [
+    "lyrics",
+    "lyrics-api",
+    "song-api",
+    "azlyrics",
+    "song-lyrics"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RRkundkar777/Slyren.git"
+    "url": "git+https://github.com/RRkundkar777/melody-api.git"
   },
   "author": "Rushikesh Kundkar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RRkundkar777/Slyren/issues"
+    "url": "https://github.com/RRkundkar777/melody-api/issues"
   },
-  "homepage": "https://github.com/RRkundkar777/Slyren#readme",
+  "homepage": "https://github.com/RRkundkar777/melody-api#readme",
   "dependencies": {
     "axios": "^0.21.4",
     "isomorphic-fetch": "^3.0.0",
