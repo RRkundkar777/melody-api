@@ -1,6 +1,6 @@
 {
   "name": "melody-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quickly fetch the lyrics of a song by its artist,title or some part of lyrics.",
   "main": "dist/index.js",
   "types": "dist",
