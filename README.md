@@ -1,6 +1,9 @@
 # melody-lyrics-api
 This api fetches the lyrics of a song by its artist,title and part of lyrics.
 
+## Contributors
+[Alen]('https://alenyohannan.xyz')
+
 ## Usage
 
 ### CommonJS
