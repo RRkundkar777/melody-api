@@ -87,6 +87,7 @@ export abstract class MelodyUtils {
             }
             if (element.querySelector('b').innerHTML === "Song results:") {
                 panels[1] = element;
+                return element;
             }
             if (element.querySelector('b').innerHTML === "Artist results:") {
                 panels[2] = element;
@@ -96,6 +97,6 @@ export abstract class MelodyUtils {
         while (panels[cnt] === undefined) {
             cnt++;
         }
-        return panels[cnt];
+        return panels[1];
     }
 }
