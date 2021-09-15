@@ -8,9 +8,12 @@
     "dist"
   ],
   "directories": {
+    "lib": "dist",
     "example": "example"
   },
   "scripts": {
+    "build": "tsc -p .",
+    "prepare": "npm run build",
     "test": "echo Welcome to the API && node example/example.js"
   },
   "keywords": [
