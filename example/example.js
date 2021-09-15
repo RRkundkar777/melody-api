@@ -1,6 +1,6 @@
-const getL = require('../src/lyrics-api');
+const { Lyrics } = require('../dist')
 
-const app = new getL();
+const app = new Lyrics();
 app.getLyrics('roar katy perry').then((response) => {
     return console.log(response);
 })

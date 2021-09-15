@@ -1,51 +1,17 @@
-// Import Libraries
-const fetch = require("isomorphic-fetch");
-const axios = require('axios');
-const jsdom = require('jsdom');
-const { JSDOM } = jsdom;
+import axios from 'axios'
+import { JSDOM } from 'jsdom';
+/* The Utility class getLyrics */
+export abstract class MelodyUtils {
 
-// Main class lyrics
-class Lyrics {
-    // Constructor
-    constructor() { };
-
-    // The getLyrics function
-    async getLyrics(query) {
-
-        try {
-            // Get the link and fetch it
-            const Link = await melodyUtils.getLink(query);
-            const response = await fetch(Link);
-
-            // Get the HTML
-            const lyrics = await response.text();
-            const dom = await new JSDOM(lyrics);
-
-            // Get the raw lyrics
-            const divs = dom.window.document.getElementsByTagName("div");
-            const divList = Array.from(divs);
-            
-            // Get the title
-            let title = dom.window.document.querySelector("div.ringtone").
-            nextElementSibling.textContent;
-
-            // process the raw lyrics
-            let Lyrics = melodyUtils.processLyrics(title, divList);
-            
-            // Return the lyrics
-            return Lyrics
-        } catch (err) {
-            console.log(err);
-        }
-    }
-}
-
-// The Utility class getLyrics
-class melodyUtils {
-    // Function to process lyrics
-    static processLyrics(title, divList) {
-        let block;
-        let cleanLyrics;
+    /**
+     * Processes Lyrics
+     * @param title 
+     * @param divList 
+     * @returns 
+     */
+    static processLyrics(title: string, divList: any[]): string {
+        let block = ''
+        let cleanLyrics = ''
         let status = true;
         let header = "\n" + title + "\n";
 
@@ -80,7 +46,7 @@ class melodyUtils {
     }
 
     // Get a Link to Lyrics
-    static async getLink(query) {
+    static async getLink(query: string) {
         // Query Processing
         query = query.split(" ").join("+");
 
@@ -110,7 +76,7 @@ class melodyUtils {
     }
 
     // Function to get most suitable Panel
-    static getPanel(panelList) {
+    static getPanel(panelList: any[]) {
 
         let panels = new Array(4);
 
@@ -133,5 +99,3 @@ class melodyUtils {
         return panels[cnt];
     }
 }
-
-module.exports = Lyrics

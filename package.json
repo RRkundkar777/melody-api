@@ -2,11 +2,18 @@
   "name": "melody-api",
   "version": "1.0.0",
   "description": "Quickly fetch the lyrics of a song by its artist,title or some part of lyrics.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist",
+  "files": [
+    "dist"
+  ],
   "directories": {
+    "lib": "dist",
     "example": "example"
   },
   "scripts": {
+    "build": "tsc -p .",
+    "prepare": "npm run build",
     "test": "echo Welcome to the API && node example/example.js"
   },
   "keywords": [
@@ -31,5 +38,10 @@
     "isomorphic-fetch": "^3.0.0",
     "jsdom": "^14.0.0",
     "whatwg-url": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/isomorphic-fetch": "^0.0.35",
+    "@types/jsdom": "^16.2.13",
+    "typescript": "^4.4.3"
   }
 }
