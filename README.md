@@ -2,7 +2,7 @@
 This api fetches the lyrics of a song by its artist,title and part of lyrics.
 
 ## Contributors
-[Alen Yohannan](https://github.com/sanket190/)
+[Alen Yohannan](https://alenyohannan.xyz)
 
 ## Usage
 
